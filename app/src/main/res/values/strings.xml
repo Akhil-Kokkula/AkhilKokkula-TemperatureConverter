@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">[Akhil Kokkula]TemperatureConverter</string>
+    <string name="warmer_message">I wish it were warmer</string>
+    <string name="colder_message">I wish it were colder</string>
+    <string name="default_fahrenheit">32</string>
+    <string name="default_celsius">0</string>
+</resources>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <SeekBar
+        android:id="@+id/celsiusSeekBar"
+        android:layout_width="355dp"
+        android:layout_height="68dp"
+        android:max="100"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.567"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.291" />
+
+    <SeekBar
+        android:id="@+id/farenheitSeekBar"
+        android:layout_width="355dp"
+        android:layout_height="68dp"
+        android:max="212"
+        android:progress="32"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/celsiusSeekBar"
+        app:layout_constraintVertical_bias="0.382" />
+
+    <TextView
+        android:id="@+id/celsius_header"
+        android:layout_width="120dp"
+        android:layout_height="28dp"
+        android:text="Celsius"
+        app:layout_constraintBottom_toTopOf="@+id/celsiusSeekBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.115"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.867" />
+
+    <TextView
+        android:id="@+id/farenheit_header"
+        android:layout_width="124dp"
+        android:layout_height="26dp"
+        android:text="Farenheit"
+        app:layout_constraintBottom_toTopOf="@+id/farenheitSeekBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.097"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/celsiusSeekBar"
+        app:layout_constraintVertical_bias="0.804" />
+
+    <TextView
+        android:id="@+id/farenheit_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/default_fahrenheit"
+        android:textAlignment="center"
+        android:textFontWeight="30"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/farenheitSeekBar"
+        app:layout_constraintVertical_bias="0.122" />
+
+    <TextView
+        android:id="@+id/celsius_value"
+        android:layout_width="76dp"
+        android:layout_height="19dp"
+        android:text="@string/default_celsius"
+        android:textAlignment="center"
+        android:textFontWeight="30"
+        app:layout_constraintBottom_toTopOf="@+id/farenheit_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/celsiusSeekBar"
+        app:layout_constraintVertical_bias="0.309" />
+
+    <TextView
+        android:id="@+id/messageDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/warmer_message"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/farenheit_value" />
+</androidx.constraintlayout.widget.ConstraintLayout>
